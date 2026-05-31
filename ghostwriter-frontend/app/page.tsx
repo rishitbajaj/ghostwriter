@@ -10,7 +10,9 @@ export default function Home() {
 
   useEffect(() => {
     // Shared socket connection for dashboard triggers
-    socketRef.current = io('http://localhost:4000');
+    const BACKEND_URL = 'https://ghostwriter-backend-d1y2.onrender.com/';
+    console.log("Connecting directly to production backend at:", BACKEND_URL);
+    socketRef.current = io(BACKEND_URL);
     socketRef.current.emit('join-room', currentRoom);
 
     return () => {
