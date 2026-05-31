@@ -30,6 +30,8 @@
 
 > **An adversarial AI that hijacks your code editor in real time.** Paste your messy JavaScript, and watch as a streaming AI rewrites it line-by-line with human-like typing speeds — inside a fully-featured Monaco Editor, with a glowing ghost cursor tracking every character it types.
 
+**Live:** [ghostwriter-ten-mocha.vercel.app](https://ghostwriter-ten-mocha.vercel.app/)
+
 <br/>
 
 ---
@@ -52,7 +54,7 @@ ghostwriter/
 ├── ghostwriter-frontend/              # Next.js 14 Application
 │   └── src/app/
 │       ├── components/
-│       │   └──              # Monaco Editor + Delta Decorations cursor
+│       │   └── Editor.tsx             # Monaco Editor + Delta Decorations cursor
 │       └── page.tsx                   # Cyberpunk UI dashboard + provoke controls
 │
 └── ghostwriter-backend/               # Fastify + Socket.IO Server
@@ -161,12 +163,14 @@ Get a Gemini API key at [aistudio.google.com](https://aistudio.google.com).
 <div align="center">
 
 ```
-RISHIT BAJAJ  ·  IIIT RANCHI  ·  https://github.com/rishitbajaj/ghostwriter.git
+RISHIT BAJAJ  ·  IIIT RANCHI  ·  github.com/rishitbajaj
 ```
 
 [![Email](https://img.shields.io/badge/bajrishit@gmail.com-0a0d14?style=for-the-badge&logo=gmail&logoColor=00e5ff)](mailto:bajrishit@gmail.com)
 &nbsp;
 [![GitHub](https://img.shields.io/badge/GitHub-0a0d14?style=for-the-badge&logo=github&logoColor=00e5ff)](https://github.com/rishitbajaj)
+&nbsp;
+[![Live Demo](https://img.shields.io/badge/Live_Demo-0a0d14?style=for-the-badge&logo=vercel&logoColor=00e5ff)](https://ghostwriter-ten-mocha.vercel.app/)
 
 *No templates. No boilerplate. Built from scratch.*
 
