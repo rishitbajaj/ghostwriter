@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Update these in src/app/globals.css */
+.ghost-cursor {
+  background-color: transparent !important;
+  border-left: 2px solid #ef4444 !important; /* Bold Crimson Red */
+  box-shadow: 0 0 12px #ef4444 !important;
+  z-index: 999 !important;
+}
+
+.ghost-cursor-zone {
+  position: relative !important;
+}
+
+.ghost-cursor-zone::after {
+  content: "GHOST_AI" !important;
+  position: absolute !important;
+  top: -18px !important;
+  left: 0px !important;
+  background: #ef4444 !important;
+  color: white !important;
+  font-family: monospace !important;
+  font-size: 10px !important;
+  font-weight: bold !important;
+  padding: 2px 4px !important;
+  border-radius: 3px !important;
+  white-space: nowrap !important;
+  pointer-events: none !important;
+  z-index: 9999 !important;
+}
