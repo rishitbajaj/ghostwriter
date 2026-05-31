@@ -23,12 +23,17 @@ fastify.get('/', async () => {
 
 const start = async () => {
   try {
-    await fastify.listen({ port: 4000, host: '127.0.0.1' });
-    console.log("Server listening at http://127.0.0.1:4000");
+    // Read the port assigned by the provider, fallback to 4000 for local testing
+    const port = Number(process.env.PORT) || 4000;
+    
+    // Change host to '0.0.0.0' to listen on all public network interfaces
+    await fastify.listen({ port: port, host: '0.0.0.0' });
+    console.log(`Server listening on port ${port}`);
 
     const io = new Server(fastify.server, {
       cors: {
-        origin: "http://localhost:3000",
+        // Replace this with your actual frontend URL once Vercel deploys it!
+        origin: process.env.FRONTEND_URL || "http://localhost:3000", 
         methods: ["GET", "POST"],
         credentials: true
       }

@@ -47,7 +47,8 @@ export default function Editor({ roomId }: EditorProps) {
   // --- WEBSOCKET HANDSHAKE AND STATE ENGINE ---
   useEffect(() => {
     // Connect to the verified running backend port
-    socketRef.current = io('http://127.0.0.1:4000');
+    const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://127.0.0.1:4000';
+    socketRef.current = io(BACKEND_URL);
     socketRef.current.emit('join-room', roomId);
 
     // Force update code text

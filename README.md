@@ -52,7 +52,7 @@ ghostwriter/
 ├── ghostwriter-frontend/              # Next.js 14 Application
 │   └── src/app/
 │       ├── components/
-│       │   └── Editor.tsx             # Monaco Editor + Delta Decorations cursor
+│       │   └──              # Monaco Editor + Delta Decorations cursor
 │       └── page.tsx                   # Cyberpunk UI dashboard + provoke controls
 │
 └── ghostwriter-backend/               # Fastify + Socket.IO Server
