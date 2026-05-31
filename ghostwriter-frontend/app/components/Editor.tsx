@@ -47,7 +47,7 @@ export default function Editor({ roomId }: EditorProps) {
   // --- WEBSOCKET HANDSHAKE AND STATE ENGINE ---
   useEffect(() => {
     // Connect to the verified running backend port
-    const BACKEND_URL = 'https://YOUR_ACTUAL_RENDER_SERVICE_NAME.onrender.com';
+    const BACKEND_URL = 'https://ghostwriter-backend-d1y2.onrender.com/';
     console.log("Connecting directly to production backend at:", BACKEND_URL);
     socketRef.current = io(BACKEND_URL);
     socketRef.current.emit('join-room', roomId);
